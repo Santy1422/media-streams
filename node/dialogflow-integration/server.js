@@ -26,6 +26,7 @@ app.get("/", (request, response) => {
 
 // Responds with Twilio instructions to begin the stream
 app.post("/twiml", (request, response) => {
+  console.log("Conectado")
   response.setHeader("Content-Type", "application/xml");
   // ngrok sets x-original-host header
   const host = request.headers['x-original-host'] || request.hostname;
